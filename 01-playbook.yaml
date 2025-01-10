@@ -1,0 +1,5 @@
+- name: jack
+  hosts: web
+  tasks:
+  - ping the server
+    ansible.builtin.ping:
