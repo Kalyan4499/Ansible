@@ -3,8 +3,8 @@
   become: yes
   tasks:
   - name: installing packages in loops
-    ansible.builtin.package
-      name: " {{ item }}"
+    ansible.builtin.package:
+      name: " {{ item }} "
       state: present
     loop:
     - maven
