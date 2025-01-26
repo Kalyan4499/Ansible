@@ -1,0 +1,28 @@
+- name: filters
+  hosts: local
+  connection: local
+  tasks:
+  tags:
+  - file manuplation
+  - name: undefined variables
+    ansible.builtin.debug:
+     msg: " Hello {{ person | default(jack) }}"
+
+
+- name: list
+  hosts: local
+  connection: local
+  vars:
+    fruits: "apple, banana, orange" #string
+  tasks:
+  # tags:
+  # - file manuplation
+  - name: items
+    ansible.buitin.debug:
+      msg: "{{ fruits | split(',') }}"
+    
+
+
+
+
+
