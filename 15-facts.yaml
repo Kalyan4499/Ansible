@@ -1,6 +1,6 @@
-- name: gathering facts
+- name: facts
   hosts: web
   tasks:
-  - name: printing facts
-    ansible.builtin.debug:
+  - name: print facts
+    ansible.buitin.debug:
       msg: "{{ ansible_facts }}"
